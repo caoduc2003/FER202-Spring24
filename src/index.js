@@ -18,11 +18,14 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <ModalsProvider>
-      <RouterProvider router={router} />
-    </ModalsProvider>
-  </React.StrictMode>
-);
+const rootElement = document.getElementById("root");
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <ModalsProvider>
+        <RouterProvider router={router} />
+      </ModalsProvider>
+    </React.StrictMode>
+  );
+}
