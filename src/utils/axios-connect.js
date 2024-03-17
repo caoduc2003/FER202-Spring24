@@ -1,7 +1,7 @@
-import axios from "axios"
+import axios from "axios";
 
-const PORT = 9999
+const PORT = 9999;
 
 export const instance = axios.create({
-    baseURL: `http://localhost:${PORT}`,
-})
+  baseURL: `http://localhost:${PORT}`,
+});
